@@ -32,6 +32,9 @@ HTML
             <li>
                 <a href="">Контакти</a>
             </li>
+            <li>
+                <a href="">Підтримати</a>
+            </li>
         </ul>
     </div>
  </body>
@@ -66,3 +69,18 @@ a {
     font-weight: bold;
     font-size: 14px;
 }
+
+.nav-list li:last-child {/*last-child - останній елемент*/
+    font-size: 36px;
+    color: red;
+}
+
+/*.nav-list li:nth-child(4) {//за немером в списку всіх дочірніх елементів
+    font-size: 36px;
+    color: red;
+}*/
+
+/*.nav-list li:nth-of-type(4) {//за немером в списку окремих дочірніх елементів
+    font-size: 36px;
+    color: red;
+}*/
