@@ -9,7 +9,8 @@ HTML
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
  </head>
  <body>
-    <div class="header">
+    <header class="header">
+      <nav class="nav">
         <div class="logo">
             <a class="lolo-link" href="">
                 <img class="lolo-img" src="https://opencages.com.ua/_nuxt/img/logo-light.9a60eb5.svg" alt="">
@@ -44,7 +45,8 @@ HTML
                 </a>
             </li>
         </ul>
-    </div>
+      </nav>
+    </header>
  </body>
 </html>
 
@@ -66,12 +68,15 @@ a {
 }
 
 .header {
+    padding: 0 20px;
+    background-color: black;
+}
+
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 50px;
-    padding: 0 20px;
-    background-color: black;
 }
 
 .lolo-link {
