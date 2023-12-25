@@ -4,9 +4,9 @@ HTML
  <head>
     <title>Super title</title>
     <link rel="stylesheet" href="./stule.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> /*на гугл фонт*/
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>/*на гугл фонт*/
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">/*на гугл фонт*/
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
  </head>
  <body>
     <div class="header">
@@ -67,8 +67,10 @@ a {
 
 .header {
     display: flex;
-    height: 50px;
     align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 20px;
     background-color: black;
 }
 
@@ -94,8 +96,13 @@ a {
     font-size: 14px;
 }
 
+.nav-list li:last-of-type {
+    padding-right: 0;
+}
+
 .nav-list-link {
     position: relative;
+    transition: all .25s ease;
 }
 
 .nav-list-link::after {
@@ -106,7 +113,16 @@ a {
     position: absolute; 
     bottom: -8px;
     left: 0;
+    transform: scaleX(0);
     transition: all .25s ease;
+}
+
+.nav-list-link:hover {
+    color: #17baaa;
+}
+
+.nav-list-link:hover::after {
+    transform: scaleX(1);
 }
 
 .nav-list li:last-child a {
