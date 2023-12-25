@@ -6,7 +6,7 @@ HTML
     <link rel="stylesheet" href="./stule.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700&display=swap&subset=latin-ext" rel="stylesheet">
  </head>
  <body>
     <header class="header">
@@ -49,6 +49,13 @@ HTML
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="burger"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg>
         </div>
       </nav>
+      <div class="header-content">
+        <h1 class="header-content-title">Приєднуйтесь до нас, щоб створити
+            <br>
+             <span class="header-content-title-green">світ вільний від страждань тварин</span>
+        </h1>
+        <a href="#" class="header-content-btn">Дізнатися більше →</a>
+      </div>
     </header>
  </body>
 </html>
@@ -71,8 +78,10 @@ a {
 }
 
 .header {
-    height: 100vh;
-    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 40px);
+    padding: 20px;
     background-image: url('https://opencages.com.ua/_nuxt/img/homepage.0151b74.jpg.webp');
     background-repeat: no-repeat;
     background-size: cover;
@@ -94,18 +103,17 @@ a {
 }
 
 .nav {
-    position: relative;
+    position: absolute;
+    width: calc(100% - 40px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
+    height: 40px;
     z-index: 1;
 }
 
-.lolo-link {
-    display: flex;
-    height: 100%;
-    align-items: center;
+.logo {
+    line-height: 1.5;
 }
 
 .lolo-img {
@@ -120,7 +128,7 @@ a {
 .nav-list li {
     padding: 0 10px;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 14px;
 }
 
@@ -160,11 +168,14 @@ a {
     padding: 0 10px;
     background-color: #dd3d53;
     border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
     transition: all .25s ease;
 }
 
 .heart {
-    margin-right: 5px;
+    margin-right: 10px;
+    font-size: 14px;
 }
 
 .nav-list li:last-child a:hover {
@@ -190,6 +201,47 @@ a {
     height: 1em;
     vertical-align: -0.125em;
     cursor: pointer;
+}
+
+.header-content {
+    margin: auto 0;
+    position: relative;
+    z-index: 1;
+}
+
+.header-content-title {
+    font-size: 56px;
+    color: white;
+    line-height: 84px;
+}
+
+.header-content-title-green {
+    color: #17baaa;
+}
+
+.header-content-btn {
+    display: block;
+    background-color: #17baaa;
+    color: #fff;
+    align-items: center;
+    border: 0;
+    box-sizing: border-box;
+    display: inline-flex;
+    font-size: 14px;
+    font-size: .875rem;
+    font-weight: 700;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 40px;
+    outline: none;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .25s ease;
+}
+
+.header-content-btn:hover {
+    background-color: #129185;
 }
 
 @media screen and (max-width: 992px) {
