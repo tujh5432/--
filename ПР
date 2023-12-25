@@ -10,6 +10,11 @@ HTML
  </head>
  <body>
     <div class="header">
+        <div class="logo">
+            <a class="lolo-link" href="">
+                <img class="lolo-img" src="https://opencages.com.ua/_nuxt/img/logo-light.9a60eb5.svg" alt="">
+            </a>
+        </div>
         <ul class="nav-list">
             <li>
                 <a href="">Про нас</a>
@@ -34,7 +39,7 @@ HTML
             </li>
             <li>
                 <a href="">
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fs-s mr-10 svg-inline--fa fa-heart fa-w-16 heart" data-v-4180a957=""><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" data-v-4180a957="" class=""></path></svg>
+                    <svg class="heart" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fs-s mr-10 svg-inline--fa fa-heart fa-w-16 heart" data-v-4180a957=""><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" data-v-4180a957="" class=""></path></svg>
                     Підтримати
                 </a>
             </li>
@@ -61,13 +66,28 @@ a {
 }
 
 .header {
+    display: flex;
     height: 50px;
-    line-height: 50px;
+    align-items: center;
     background-color: black;
 }
 
+.lolo-link {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.lolo-img {
+    height: 40px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
 .nav-list li {
-    display: inline-block;
     padding: 0 10px;
     color: white;
     font-weight: bold;
@@ -75,13 +95,17 @@ a {
 }
 
 .nav-list li:last-child a {
-    display: block;
+    display: flex;
     height: 30px;
-    line-height: 30px;
+    align-items: center;
     padding: 0 10px;
     background-color: #dd3d53;
     border-radius: 3px;
     transition: all .25s ease;
+}
+
+.heart {
+    margin-right: 5px;
 }
 
 .nav-list li:last-child a:hover {
