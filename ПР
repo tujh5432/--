@@ -4,6 +4,9 @@ HTML
  <head>
     <title>Super title</title>
     <link rel="stylesheet" href="./stule.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> /*на гугл фонт*/
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>/*на гугл фонт*/
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">/*на гугл фонт*/
  </head>
  <body>
     <div class="header">
@@ -37,6 +40,8 @@ HTML
 CSS
 body {
     margin: 0;
+    /*font-family: 'Raleway', sans-serif; на гугл фонт*/
+    font-family: "Raleway", "Arial", "Helvetica", sans-serif;
 }
 
 ul {
@@ -58,4 +63,6 @@ a {
 .nav-list li {
     display: inline-block;
     color: white;
+    font-weight: bold;
+    font-size: 14px;
 }
