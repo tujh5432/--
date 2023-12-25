@@ -45,6 +45,9 @@ HTML
                 </a>
             </li>
         </ul>
+        <div class="nav-toggle">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="burger"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg>
+        </div>
       </nav>
     </header>
  </body>
@@ -170,4 +173,30 @@ a {
 
 .nav-list li:last-child a svg {
     width: 1em;
+}
+
+.nav-toggle {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.burger {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    vertical-align: -0.125em;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+    .nav-list {
+        display: none;
+    }
+    .nav-toggle {
+        display: block;
+    }
 }
